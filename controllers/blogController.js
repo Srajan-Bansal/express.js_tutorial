@@ -10,6 +10,7 @@ const blog_index = (req, res) => {
     });
 }
 
+
 const blog_details = (req, res) => {
   const id = req.params.id;
   Blog.findById(id)
@@ -18,6 +19,7 @@ const blog_details = (req, res) => {
     })
     .catch(err => {
       console.log(err);
+      res.render('404', { title: 'Blog not found' });
     });
 }
 

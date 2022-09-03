@@ -12,7 +12,9 @@
         <div class="content">
             <p><b>body:</b> <%= blog.body %> </p>
         </div>
-        <a data-doc="<%= blog._id %>" class="delete">"delete"</a>
+        <a data-doc="<%= blog._id %>" class="delete">
+            <img src="/trashcan.svg" alt="delete icon">
+        </a>
     </div>
 
     <%- include("../partials/footer.ejs") %> 
